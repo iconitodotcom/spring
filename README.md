@@ -1,2 +1,2 @@
-# quarkus_learning
-This is a repository that contains Quarkus projects for learning and more
+# Java Spring
+This is a repository that contains Spring projects for learning and more
