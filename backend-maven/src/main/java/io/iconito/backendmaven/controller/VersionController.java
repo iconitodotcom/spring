@@ -1,0 +1,20 @@
+package io.iconito.backendmaven.controller;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.context.annotation.RequestScope;
+
+@RestController
+// @RequestMapping("/api/versions/{v}")
+@RequestMapping("/api/version")
+public class VersionController {
+
+    @GetMapping(version="1.0")
+    public ResponseEntity<String> defaultVersion()
+    { return ResponseEntity.ok().body("Version 1.0.0"); }
+    @GetMapping(version="2.0+")
+    public ResponseEntity<String> v2Version()
+    { return ResponseEntity.ok().body("Version 2.0.0"); }
+}

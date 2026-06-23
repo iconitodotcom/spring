@@ -2,6 +2,68 @@
 ### author : julio conchas <conchasjimenez@gmail.com>
 ---
 
+---
+
+## 📑 Table of Contents
+
+1. [Spring annotations](#spring-annotations)
+2. [Maven dependencies](#maven-dependencies)
+3. [Common commands](#common-commands)
+4. [Application properties](#application-properties)
+
+
+
+## Spring annotations
+
+| Annotation | Package | Example | Notes |
+|-------|----------|----------------|------|
+| @Bean | org.springframework.context.annotation| Immediate | High |
+| @Configuration | org.springframework.context.annotation | Immediate | Medium |
+| @Import | org.springframework.context.annotation | Immediate | Medium |
+| @RestController | org.springframework.web.bind.annotation | @RestController | Estereotype annotation, response JSON |
+| @SpringBootApplication | org.springframework.web.bind.annotation | @SpringBootApplication(expluce = {something.class})| indicates main class |
+| @SpringBootConfiguration |  | | Marks this class as a configuration class |
+| @EnableAutoConfiguration |  | | Automatically configures Spring Boot based on the dependencies |
+| @CmponentScan | | @ComponentScan(basePackages={"\<pacakge\>"}) | Scans and registers Spring components ( like @Component, @Service, etc) |
+| @GetMapping | org.springframework.web.bind.annotation | @GetMapping(basePackages={"\<End Point path\>"}) | |
+| @PathVariable | org.springframework.web.bind.annotation | @PathVariable(required = false) @PathVariable(name="somename") | Those are use to catch variables send thru the path endpoint path| 
+| @RequestMapping | org.springframework.web.bind.annotation | @RequestMapping("api/something") @RequestMapping("api/something", method = {RequestMethod.GET, RequestMethod.POST}) @RequestMapping("api/something", method = {RequestMethod.GET, RequestMethod.POST}, consumes = ..., produces=...)  | setup prefix path for all the method in the class, no restriction for request methos it accept any GET,PORT..etc | 
+| @RequestParam | org.springframework.web.bind.annotation | @RequiredParam(required = false, defaultValue= "Guest" )| This is use to handle query params in endpoing path | 
+| @RequestHeader | org.springframework.web.bind.annotation | @ReadHeader("User-Agent") | | 
+| @RequestBody | org.springframework.web.bind.annotation |  | | 
+| @PostMapping | org.springframework.web.bind.annotation | @PostMapping("request-entity") | | 
+
+
+---
+
+## Maven dependencies
+
+| artifactId | groupId | Example | Notes |
+|-------|----------|----------------|------|
+| spring-boot-starter-webmvc | rg.springframework.boot| Immediate | High |
+
+---
+
+## Common Commands
+
+| artifactId | groupId | Example | Notes |
+|-------|----------|----------------|------|
+| spring-boot-starter-webmvc | rg.springframework.boot| Immediate | High |
+
+---
+
+## Application properties
+
+- Docummentation Common Application Properties 
+
+| Propertie | Example | Note |
+|-------|----------|----------------|
+| server.port | server.port=8081| Immediate |
+| server.servlet.context-path | server.servlet.context-path=/backend|  |
+| debug | debug=true|  |
+
+---
+
 pom.xml add dependencies to tranfor project into Spring project 
 to know what's the latest dependency version go to spring.io -> Projects -> Spring Framework
 
